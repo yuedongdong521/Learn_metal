@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8438D7D322D46D9100439BDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7D222D46D9100439BDA /* AppDelegate.m */; };
+		8438D7D622D46D9100439BDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7D522D46D9100439BDA /* ViewController.m */; };
+		8438D7D922D46D9100439BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8438D7D722D46D9100439BDA /* Main.storyboard */; };
+		8438D7DB22D46D9300439BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8438D7DA22D46D9300439BDA /* Assets.xcassets */; };
+		8438D7DE22D46D9300439BDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8438D7DC22D46D9300439BDA /* LaunchScreen.storyboard */; };
+		8438D7E122D46D9300439BDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7E022D46D9300439BDA /* main.m */; };
+		8438D7EB22D46D9300439BDA /* Learn_metalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7EA22D46D9300439BDA /* Learn_metalTests.m */; };
+		8438D7F622D46D9300439BDA /* Learn_metalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7F522D46D9300439BDA /* Learn_metalUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8438D7E722D46D9300439BDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8438D7C622D46D9100439BDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8438D7CD22D46D9100439BDA;
+			remoteInfo = Learn_metal;
+		};
+		8438D7F222D46D9300439BDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8438D7C622D46D9100439BDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8438D7CD22D46D9100439BDA;
+			remoteInfo = Learn_metal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8438D7CE22D46D9100439BDA /* Learn_metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learn_metal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8438D7D122D46D9100439BDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8438D7D222D46D9100439BDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8438D7D422D46D9100439BDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8438D7D522D46D9100439BDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8438D7D822D46D9100439BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8438D7DA22D46D9300439BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8438D7DD22D46D9300439BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8438D7DF22D46D9300439BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8438D7E022D46D9300439BDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8438D7E622D46D9300439BDA /* Learn_metalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Learn_metalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8438D7EA22D46D9300439BDA /* Learn_metalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learn_metalTests.m; sourceTree = "<group>"; };
+		8438D7EC22D46D9300439BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8438D7F122D46D9300439BDA /* Learn_metalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Learn_metalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8438D7F522D46D9300439BDA /* Learn_metalUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learn_metalUITests.m; sourceTree = "<group>"; };
+		8438D7F722D46D9300439BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8438D7CB22D46D9100439BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8438D7E322D46D9300439BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8438D7EE22D46D9300439BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8438D7C522D46D9100439BDA = {
+			isa = PBXGroup;
+			children = (
+				8438D7D022D46D9100439BDA /* Learn_metal */,
+				8438D7E922D46D9300439BDA /* Learn_metalTests */,
+				8438D7F422D46D9300439BDA /* Learn_metalUITests */,
+				8438D7CF22D46D9100439BDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8438D7CF22D46D9100439BDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8438D7CE22D46D9100439BDA /* Learn_metal.app */,
+				8438D7E622D46D9300439BDA /* Learn_metalTests.xctest */,
+				8438D7F122D46D9300439BDA /* Learn_metalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8438D7D022D46D9100439BDA /* Learn_metal */ = {
+			isa = PBXGroup;
+			children = (
+				8438D7D122D46D9100439BDA /* AppDelegate.h */,
+				8438D7D222D46D9100439BDA /* AppDelegate.m */,
+				8438D7D422D46D9100439BDA /* ViewController.h */,
+				8438D7D522D46D9100439BDA /* ViewController.m */,
+				8438D7D722D46D9100439BDA /* Main.storyboard */,
+				8438D7DA22D46D9300439BDA /* Assets.xcassets */,
+				8438D7DC22D46D9300439BDA /* LaunchScreen.storyboard */,
+				8438D7DF22D46D9300439BDA /* Info.plist */,
+				8438D7E022D46D9300439BDA /* main.m */,
+			);
+			path = Learn_metal;
+			sourceTree = "<group>";
+		};
+		8438D7E922D46D9300439BDA /* Learn_metalTests */ = {
+			isa = PBXGroup;
+			children = (
+				8438D7EA22D46D9300439BDA /* Learn_metalTests.m */,
+				8438D7EC22D46D9300439BDA /* Info.plist */,
+			);
+			path = Learn_metalTests;
+			sourceTree = "<group>";
+		};
+		8438D7F422D46D9300439BDA /* Learn_metalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8438D7F522D46D9300439BDA /* Learn_metalUITests.m */,
+				8438D7F722D46D9300439BDA /* Info.plist */,
+			);
+			path = Learn_metalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8438D7CD22D46D9100439BDA /* Learn_metal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8438D7FA22D46D9300439BDA /* Build configuration list for PBXNativeTarget "Learn_metal" */;
+			buildPhases = (
+				8438D7CA22D46D9100439BDA /* Sources */,
+				8438D7CB22D46D9100439BDA /* Frameworks */,
+				8438D7CC22D46D9100439BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Learn_metal;
+			productName = Learn_metal;
+			productReference = 8438D7CE22D46D9100439BDA /* Learn_metal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8438D7E522D46D9300439BDA /* Learn_metalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8438D7FD22D46D9300439BDA /* Build configuration list for PBXNativeTarget "Learn_metalTests" */;
+			buildPhases = (
+				8438D7E222D46D9300439BDA /* Sources */,
+				8438D7E322D46D9300439BDA /* Frameworks */,
+				8438D7E422D46D9300439BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8438D7E822D46D9300439BDA /* PBXTargetDependency */,
+			);
+			name = Learn_metalTests;
+			productName = Learn_metalTests;
+			productReference = 8438D7E622D46D9300439BDA /* Learn_metalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8438D7F022D46D9300439BDA /* Learn_metalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8438D80022D46D9300439BDA /* Build configuration list for PBXNativeTarget "Learn_metalUITests" */;
+			buildPhases = (
+				8438D7ED22D46D9300439BDA /* Sources */,
+				8438D7EE22D46D9300439BDA /* Frameworks */,
+				8438D7EF22D46D9300439BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8438D7F322D46D9300439BDA /* PBXTargetDependency */,
+			);
+			name = Learn_metalUITests;
+			productName = Learn_metalUITests;
+			productReference = 8438D7F122D46D9300439BDA /* Learn_metalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8438D7C622D46D9100439BDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = ydd;
+				TargetAttributes = {
+					8438D7CD22D46D9100439BDA = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					8438D7E522D46D9300439BDA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 8438D7CD22D46D9100439BDA;
+					};
+					8438D7F022D46D9300439BDA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 8438D7CD22D46D9100439BDA;
+					};
+				};
+			};
+			buildConfigurationList = 8438D7C922D46D9100439BDA /* Build configuration list for PBXProject "Learn_metal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8438D7C522D46D9100439BDA;
+			productRefGroup = 8438D7CF22D46D9100439BDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8438D7CD22D46D9100439BDA /* Learn_metal */,
+				8438D7E522D46D9300439BDA /* Learn_metalTests */,
+				8438D7F022D46D9300439BDA /* Learn_metalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8438D7CC22D46D9100439BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8438D7DE22D46D9300439BDA /* LaunchScreen.storyboard in Resources */,
+				8438D7DB22D46D9300439BDA /* Assets.xcassets in Resources */,
+				8438D7D922D46D9100439BDA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8438D7E422D46D9300439BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8438D7EF22D46D9300439BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8438D7CA22D46D9100439BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8438D7D622D46D9100439BDA /* ViewController.m in Sources */,
+				8438D7E122D46D9300439BDA /* main.m in Sources */,
+				8438D7D322D46D9100439BDA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8438D7E222D46D9300439BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8438D7EB22D46D9300439BDA /* Learn_metalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8438D7ED22D46D9300439BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8438D7F622D46D9300439BDA /* Learn_metalUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8438D7E822D46D9300439BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8438D7CD22D46D9100439BDA /* Learn_metal */;
+			targetProxy = 8438D7E722D46D9300439BDA /* PBXContainerItemProxy */;
+		};
+		8438D7F322D46D9300439BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8438D7CD22D46D9100439BDA /* Learn_metal */;
+			targetProxy = 8438D7F222D46D9300439BDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8438D7D722D46D9100439BDA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8438D7D822D46D9100439BDA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8438D7DC22D46D9300439BDA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8438D7DD22D46D9300439BDA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8438D7F822D46D9300439BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8438D7F922D46D9300439BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8438D7FB22D46D9300439BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Learn_metal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8438D7FC22D46D9300439BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Learn_metal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8438D7FE22D46D9300439BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Learn_metalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learn_metal.app/Learn_metal";
+			};
+			name = Debug;
+		};
+		8438D7FF22D46D9300439BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Learn_metalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learn_metal.app/Learn_metal";
+			};
+			name = Release;
+		};
+		8438D80122D46D9300439BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Learn_metalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Learn_metal;
+			};
+			name = Debug;
+		};
+		8438D80222D46D9300439BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Learn_metalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Learn_metal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8438D7C922D46D9100439BDA /* Build configuration list for PBXProject "Learn_metal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8438D7F822D46D9300439BDA /* Debug */,
+				8438D7F922D46D9300439BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8438D7FA22D46D9300439BDA /* Build configuration list for PBXNativeTarget "Learn_metal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8438D7FB22D46D9300439BDA /* Debug */,
+				8438D7FC22D46D9300439BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8438D7FD22D46D9300439BDA /* Build configuration list for PBXNativeTarget "Learn_metalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8438D7FE22D46D9300439BDA /* Debug */,
+				8438D7FF22D46D9300439BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8438D80022D46D9300439BDA /* Build configuration list for PBXNativeTarget "Learn_metalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8438D80122D46D9300439BDA /* Debug */,
+				8438D80222D46D9300439BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8438D7C622D46D9100439BDA /* Project object */;
+}
