@@ -45,6 +45,11 @@
 }
 */
 
+- (void)dealloc
+{
+    NSLog(@"dealloc %@", NSStringFromClass(self.class));
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

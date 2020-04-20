@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840765E7244999F90037B14B /* 520.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 840765E6244999F90037B14B /* 520.mp4 */; };
+		840765EA24499EC10037B14B /* AlphaFrameFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 840765E924499EC10037B14B /* AlphaFrameFilter.m */; };
+		840765EE244A93690037B14B /* YDDAlphaPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840765ED244A93690037B14B /* YDDAlphaPlayerView.m */; };
+		840765F1244AA59C0037B14B /* YDDAlphaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840765F0244AA59C0037B14B /* YDDAlphaViewController.m */; };
+		840765F4244AAAD90037B14B /* ISH264Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 840765F3244AAAD90037B14B /* ISH264Player.m */; };
+		84359C3122DC2EF500FF0684 /* YDDAssetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84359C3022DC2EF500FF0684 /* YDDAssetReader.m */; };
+		8436615122D9A36900385FF3 /* SegmentationShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8436615022D9A36900385FF3 /* SegmentationShader.metal */; };
+		8436615A22D9C53300385FF3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8436615922D9C53300385FF3 /* OpenGLES.framework */; };
+		8436615C22D9C53C00385FF3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8436615B22D9C53C00385FF3 /* QuartzCore.framework */; };
+		8436D9AB22D5BCBA00068F0F /* AudioDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9AA22D5BCBA00068F0F /* AudioDataView.m */; };
+		8436D9B222D5CEC500068F0F /* QueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9B022D5CEC500068F0F /* QueuePlayer.m */; };
+		8436D9B722D5CEE800068F0F /* MCAudioInputQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9B322D5CEE800068F0F /* MCAudioInputQueue.m */; };
+		8436D9B822D5CEE800068F0F /* AVAudioPlayer+PCM.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9B422D5CEE800068F0F /* AVAudioPlayer+PCM.m */; };
+		8436D9BE22D5D81700068F0F /* Metal_CaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9BD22D5D81700068F0F /* Metal_CaptureView.m */; };
+		8436D9C622D5E6C300068F0F /* Metal_DrawImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9C322D5E6C200068F0F /* Metal_DrawImage.m */; };
+		8436D9C722D5E6C300068F0F /* Metal_VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9C522D5E6C300068F0F /* Metal_VideoPlayer.m */; };
+		8436D9CD22D5E77500068F0F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436D9CC22D5E77500068F0F /* CameraViewController.m */; };
+		8437C09522D83C720024EBA4 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437C09422D83C720024EBA4 /* AudioPlayer.m */; };
 		8438D7D322D46D9100439BDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7D222D46D9100439BDA /* AppDelegate.m */; };
 		8438D7D622D46D9100439BDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7D522D46D9100439BDA /* ViewController.m */; };
 		8438D7D922D46D9100439BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8438D7D722D46D9100439BDA /* Main.storyboard */; };
@@ -15,6 +33,15 @@
 		8438D7E122D46D9300439BDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7E022D46D9300439BDA /* main.m */; };
 		8438D7EB22D46D9300439BDA /* Learn_metalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7EA22D46D9300439BDA /* Learn_metalTests.m */; };
 		8438D7F622D46D9300439BDA /* Learn_metalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D7F522D46D9300439BDA /* Learn_metalUITests.m */; };
+		8438D80522D46DE200439BDA /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8438D80422D46DE200439BDA /* MetalKit.framework */; };
+		8438D80A22D489AC00439BDA /* jintian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8438D80922D489AC00439BDA /* jintian.jpg */; };
+		8438D80C22D49DD200439BDA /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8438D80B22D49DD200439BDA /* shaders.metal */; };
+		8438D81322D4A5DE00439BDA /* LYAssetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438D81122D4A5DD00439BDA /* LYAssetReader.m */; };
+		8438D81522D4B32800439BDA /* Cat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8438D81422D4B32800439BDA /* Cat.mp4 */; };
+		843A0C6622E5AD0400DB8661 /* TCMediaFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 843A0C6422E5AD0400DB8661 /* TCMediaFileReader.m */; };
+		843F034D22D7084D0012AE17 /* MetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F034C22D7084D0012AE17 /* MetalViewController.m */; };
+		843F035022D72B9C0012AE17 /* AudioQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F034F22D72B9C0012AE17 /* AudioQueuePlayer.m */; };
+		843F035322D73F880012AE17 /* AssetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F035222D73F880012AE17 /* AssetReader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +62,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840765E6244999F90037B14B /* 520.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 520.mp4; sourceTree = "<group>"; };
+		840765E824499EC10037B14B /* AlphaFrameFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaFrameFilter.h; sourceTree = "<group>"; };
+		840765E924499EC10037B14B /* AlphaFrameFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaFrameFilter.m; sourceTree = "<group>"; };
+		840765EC244A93690037B14B /* YDDAlphaPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDDAlphaPlayerView.h; sourceTree = "<group>"; };
+		840765ED244A93690037B14B /* YDDAlphaPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDDAlphaPlayerView.m; sourceTree = "<group>"; };
+		840765EF244AA59C0037B14B /* YDDAlphaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDDAlphaViewController.h; sourceTree = "<group>"; };
+		840765F0244AA59C0037B14B /* YDDAlphaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDDAlphaViewController.m; sourceTree = "<group>"; };
+		840765F2244AAAD90037B14B /* ISH264Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISH264Player.h; sourceTree = "<group>"; };
+		840765F3244AAAD90037B14B /* ISH264Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISH264Player.m; sourceTree = "<group>"; };
+		84359C2F22DC2EF500FF0684 /* YDDAssetReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDDAssetReader.h; sourceTree = "<group>"; };
+		84359C3022DC2EF500FF0684 /* YDDAssetReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDDAssetReader.m; sourceTree = "<group>"; };
+		8436615022D9A36900385FF3 /* SegmentationShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SegmentationShader.metal; sourceTree = "<group>"; };
+		8436615922D9C53300385FF3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		8436615B22D9C53C00385FF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8436D9A922D5BCBA00068F0F /* AudioDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioDataView.h; sourceTree = "<group>"; };
+		8436D9AA22D5BCBA00068F0F /* AudioDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioDataView.m; sourceTree = "<group>"; };
+		8436D9B022D5CEC500068F0F /* QueuePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueuePlayer.m; sourceTree = "<group>"; };
+		8436D9B122D5CEC500068F0F /* QueuePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueuePlayer.h; sourceTree = "<group>"; };
+		8436D9B322D5CEE800068F0F /* MCAudioInputQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAudioInputQueue.m; sourceTree = "<group>"; };
+		8436D9B422D5CEE800068F0F /* AVAudioPlayer+PCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioPlayer+PCM.m"; sourceTree = "<group>"; };
+		8436D9B522D5CEE800068F0F /* AVAudioPlayer+PCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioPlayer+PCM.h"; sourceTree = "<group>"; };
+		8436D9B622D5CEE800068F0F /* MCAudioInputQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAudioInputQueue.h; sourceTree = "<group>"; };
+		8436D9BC22D5D81700068F0F /* Metal_CaptureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Metal_CaptureView.h; sourceTree = "<group>"; };
+		8436D9BD22D5D81700068F0F /* Metal_CaptureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Metal_CaptureView.m; sourceTree = "<group>"; };
+		8436D9C222D5E6C200068F0F /* Metal_DrawImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metal_DrawImage.h; sourceTree = "<group>"; };
+		8436D9C322D5E6C200068F0F /* Metal_DrawImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Metal_DrawImage.m; sourceTree = "<group>"; };
+		8436D9C422D5E6C200068F0F /* Metal_VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metal_VideoPlayer.h; sourceTree = "<group>"; };
+		8436D9C522D5E6C300068F0F /* Metal_VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Metal_VideoPlayer.m; sourceTree = "<group>"; };
+		8436D9CB22D5E77500068F0F /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		8436D9CC22D5E77500068F0F /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		8437C09322D83C720024EBA4 /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		8437C09422D83C720024EBA4 /* AudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		8438D7CE22D46D9100439BDA /* Learn_metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learn_metal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8438D7D122D46D9100439BDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8438D7D222D46D9100439BDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +110,21 @@
 		8438D7F122D46D9300439BDA /* Learn_metalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Learn_metalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8438D7F522D46D9300439BDA /* Learn_metalUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learn_metalUITests.m; sourceTree = "<group>"; };
 		8438D7F722D46D9300439BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8438D80422D46DE200439BDA /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		8438D80922D489AC00439BDA /* jintian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jintian.jpg; sourceTree = "<group>"; };
+		8438D80B22D49DD200439BDA /* shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
+		8438D80D22D49E6E00439BDA /* LYShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYShaderTypes.h; sourceTree = "<group>"; };
+		8438D81122D4A5DD00439BDA /* LYAssetReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAssetReader.m; sourceTree = "<group>"; };
+		8438D81222D4A5DD00439BDA /* LYAssetReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAssetReader.h; sourceTree = "<group>"; };
+		8438D81422D4B32800439BDA /* Cat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cat.mp4; sourceTree = "<group>"; };
+		843A0C6422E5AD0400DB8661 /* TCMediaFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMediaFileReader.m; sourceTree = "<group>"; };
+		843A0C6522E5AD0400DB8661 /* TCMediaFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMediaFileReader.h; sourceTree = "<group>"; };
+		843F034B22D7084D0012AE17 /* MetalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalViewController.h; sourceTree = "<group>"; };
+		843F034C22D7084D0012AE17 /* MetalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalViewController.m; sourceTree = "<group>"; };
+		843F034E22D72B9C0012AE17 /* AudioQueuePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueuePlayer.h; sourceTree = "<group>"; };
+		843F034F22D72B9C0012AE17 /* AudioQueuePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioQueuePlayer.m; sourceTree = "<group>"; };
+		843F035122D73F880012AE17 /* AssetReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetReader.h; sourceTree = "<group>"; };
+		843F035222D73F880012AE17 /* AssetReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8436615C22D9C53C00385FF3 /* QuartzCore.framework in Frameworks */,
+				8436615A22D9C53300385FF3 /* OpenGLES.framework in Frameworks */,
+				8438D80522D46DE200439BDA /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +155,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840765EB244A92DD0037B14B /* AlphaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				840765F2244AAAD90037B14B /* ISH264Player.h */,
+				840765F3244AAAD90037B14B /* ISH264Player.m */,
+				840765E824499EC10037B14B /* AlphaFrameFilter.h */,
+				840765E924499EC10037B14B /* AlphaFrameFilter.m */,
+				840765EC244A93690037B14B /* YDDAlphaPlayerView.h */,
+				840765ED244A93690037B14B /* YDDAlphaPlayerView.m */,
+				840765EF244AA59C0037B14B /* YDDAlphaViewController.h */,
+				840765F0244AA59C0037B14B /* YDDAlphaViewController.m */,
+			);
+			path = AlphaPlayer;
+			sourceTree = "<group>";
+		};
+		84359C2E22DC2E9100FF0684 /* assetReader */ = {
+			isa = PBXGroup;
+			children = (
+				843A0C6522E5AD0400DB8661 /* TCMediaFileReader.h */,
+				843A0C6422E5AD0400DB8661 /* TCMediaFileReader.m */,
+				843F035122D73F880012AE17 /* AssetReader.h */,
+				843F035222D73F880012AE17 /* AssetReader.m */,
+				8438D81222D4A5DD00439BDA /* LYAssetReader.h */,
+				8438D81122D4A5DD00439BDA /* LYAssetReader.m */,
+				84359C2F22DC2EF500FF0684 /* YDDAssetReader.h */,
+				84359C3022DC2EF500FF0684 /* YDDAssetReader.m */,
+			);
+			path = assetReader;
+			sourceTree = "<group>";
+		};
+		8436D9AF22D5CE6500068F0F /* audioQueue */ = {
+			isa = PBXGroup;
+			children = (
+				8436D9B522D5CEE800068F0F /* AVAudioPlayer+PCM.h */,
+				8436D9B422D5CEE800068F0F /* AVAudioPlayer+PCM.m */,
+				8436D9B622D5CEE800068F0F /* MCAudioInputQueue.h */,
+				8436D9B322D5CEE800068F0F /* MCAudioInputQueue.m */,
+				8436D9B122D5CEC500068F0F /* QueuePlayer.h */,
+				8436D9B022D5CEC500068F0F /* QueuePlayer.m */,
+				843F034E22D72B9C0012AE17 /* AudioQueuePlayer.h */,
+				843F034F22D72B9C0012AE17 /* AudioQueuePlayer.m */,
+			);
+			path = audioQueue;
+			sourceTree = "<group>";
+		};
 		8438D7C522D46D9100439BDA = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +207,7 @@
 				8438D7E922D46D9300439BDA /* Learn_metalTests */,
 				8438D7F422D46D9300439BDA /* Learn_metalUITests */,
 				8438D7CF22D46D9100439BDA /* Products */,
+				8438D80322D46DE200439BDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,12 +224,27 @@
 		8438D7D022D46D9100439BDA /* Learn_metal */ = {
 			isa = PBXGroup;
 			children = (
+				840765EB244A92DD0037B14B /* AlphaPlayer */,
+				84359C2E22DC2E9100FF0684 /* assetReader */,
+				843F034722D707460012AE17 /* metalController */,
+				843F034622D707030012AE17 /* metalView */,
+				8436D9AF22D5CE6500068F0F /* audioQueue */,
+				8438D81422D4B32800439BDA /* Cat.mp4 */,
+				840765E6244999F90037B14B /* 520.mp4 */,
 				8438D7D122D46D9100439BDA /* AppDelegate.h */,
 				8438D7D222D46D9100439BDA /* AppDelegate.m */,
 				8438D7D422D46D9100439BDA /* ViewController.h */,
 				8438D7D522D46D9100439BDA /* ViewController.m */,
+				8436D9A922D5BCBA00068F0F /* AudioDataView.h */,
+				8436D9AA22D5BCBA00068F0F /* AudioDataView.m */,
+				8437C09322D83C720024EBA4 /* AudioPlayer.h */,
+				8437C09422D83C720024EBA4 /* AudioPlayer.m */,
+				8438D80D22D49E6E00439BDA /* LYShaderTypes.h */,
+				8438D80B22D49DD200439BDA /* shaders.metal */,
+				8436615022D9A36900385FF3 /* SegmentationShader.metal */,
 				8438D7D722D46D9100439BDA /* Main.storyboard */,
 				8438D7DA22D46D9300439BDA /* Assets.xcassets */,
+				8438D80922D489AC00439BDA /* jintian.jpg */,
 				8438D7DC22D46D9300439BDA /* LaunchScreen.storyboard */,
 				8438D7DF22D46D9300439BDA /* Info.plist */,
 				8438D7E022D46D9300439BDA /* main.m */,
@@ -130,6 +268,40 @@
 				8438D7F722D46D9300439BDA /* Info.plist */,
 			);
 			path = Learn_metalUITests;
+			sourceTree = "<group>";
+		};
+		8438D80322D46DE200439BDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8436615B22D9C53C00385FF3 /* QuartzCore.framework */,
+				8436615922D9C53300385FF3 /* OpenGLES.framework */,
+				8438D80422D46DE200439BDA /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		843F034622D707030012AE17 /* metalView */ = {
+			isa = PBXGroup;
+			children = (
+				8436D9BC22D5D81700068F0F /* Metal_CaptureView.h */,
+				8436D9BD22D5D81700068F0F /* Metal_CaptureView.m */,
+				8436D9C222D5E6C200068F0F /* Metal_DrawImage.h */,
+				8436D9C322D5E6C200068F0F /* Metal_DrawImage.m */,
+				8436D9C422D5E6C200068F0F /* Metal_VideoPlayer.h */,
+				8436D9C522D5E6C300068F0F /* Metal_VideoPlayer.m */,
+			);
+			path = metalView;
+			sourceTree = "<group>";
+		};
+		843F034722D707460012AE17 /* metalController */ = {
+			isa = PBXGroup;
+			children = (
+				8436D9CB22D5E77500068F0F /* CameraViewController.h */,
+				8436D9CC22D5E77500068F0F /* CameraViewController.m */,
+				843F034B22D7084D0012AE17 /* MetalViewController.h */,
+				843F034C22D7084D0012AE17 /* MetalViewController.m */,
+			);
+			path = metalController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +407,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8438D80A22D489AC00439BDA /* jintian.jpg in Resources */,
 				8438D7DE22D46D9300439BDA /* LaunchScreen.storyboard in Resources */,
+				8438D81522D4B32800439BDA /* Cat.mp4 in Resources */,
+				840765E7244999F90037B14B /* 520.mp4 in Resources */,
 				8438D7DB22D46D9300439BDA /* Assets.xcassets in Resources */,
 				8438D7D922D46D9100439BDA /* Main.storyboard in Resources */,
 			);
@@ -262,9 +437,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840765F4244AAAD90037B14B /* ISH264Player.m in Sources */,
+				8437C09522D83C720024EBA4 /* AudioPlayer.m in Sources */,
+				8436D9B222D5CEC500068F0F /* QueuePlayer.m in Sources */,
 				8438D7D622D46D9100439BDA /* ViewController.m in Sources */,
+				8436D9AB22D5BCBA00068F0F /* AudioDataView.m in Sources */,
+				8436615122D9A36900385FF3 /* SegmentationShader.metal in Sources */,
+				840765EE244A93690037B14B /* YDDAlphaPlayerView.m in Sources */,
+				8436D9B822D5CEE800068F0F /* AVAudioPlayer+PCM.m in Sources */,
+				840765EA24499EC10037B14B /* AlphaFrameFilter.m in Sources */,
+				8436D9C722D5E6C300068F0F /* Metal_VideoPlayer.m in Sources */,
+				8436D9B722D5CEE800068F0F /* MCAudioInputQueue.m in Sources */,
+				843F034D22D7084D0012AE17 /* MetalViewController.m in Sources */,
+				843F035022D72B9C0012AE17 /* AudioQueuePlayer.m in Sources */,
+				8438D80C22D49DD200439BDA /* shaders.metal in Sources */,
 				8438D7E122D46D9300439BDA /* main.m in Sources */,
+				8436D9C622D5E6C300068F0F /* Metal_DrawImage.m in Sources */,
+				84359C3122DC2EF500FF0684 /* YDDAssetReader.m in Sources */,
+				843F035322D73F880012AE17 /* AssetReader.m in Sources */,
+				843A0C6622E5AD0400DB8661 /* TCMediaFileReader.m in Sources */,
+				8436D9CD22D5E77500068F0F /* CameraViewController.m in Sources */,
 				8438D7D322D46D9100439BDA /* AppDelegate.m in Sources */,
+				8438D81322D4A5DE00439BDA /* LYAssetReader.m in Sources */,
+				840765F1244AA59C0037B14B /* YDDAlphaViewController.m in Sources */,
+				8436D9BE22D5D81700068F0F /* Metal_CaptureView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,12 +632,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8F7D4C878S;
 				INFOPLIST_FILE = Learn_metal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metal";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ydd.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,12 +650,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8F7D4C878S;
 				INFOPLIST_FILE = Learn_metal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ydd.test.Learn-metal";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ydd.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -12,6 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AudioPlayer : NSObject
 
+@property (nonatomic, assign) BOOL runloop;
+
+- (instancetype)initWithUrl:(NSURL *)url;
+
+- (void)play;
+- (void)playUrl:(NSURL *)url;
+- (void)pause;
+- (void)destory;
+
 @end
 
 NS_ASSUME_NONNULL_END

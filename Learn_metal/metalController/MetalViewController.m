@@ -17,6 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    if (self.metalView) {
+        [self.view addSubview:self.metalView];
+    }
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(20, 40, 44, 44);
+    [button setTitle:@"X" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.3]];
+    [button addTarget:self action:@selector(queueAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)queueAction
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

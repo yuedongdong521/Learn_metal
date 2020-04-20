@@ -31,6 +31,10 @@
 
 @implementation Metal_DrawImage
 
+- (void)dealloc
+{
+    NSLog(@"dealloc %@", NSStringFromClass(self.class));
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -38,6 +42,7 @@
     if (self) {
         [self addSubview:self.mtkView];
         self.viewporSize = (vector_uint2){self.mtkView.drawableSize.width, self.mtkView.drawableSize.height};
+        [self renderShader];
     }
     return self;
 }

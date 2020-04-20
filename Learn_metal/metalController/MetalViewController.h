@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MetalViewController : UIViewController
 
+@property (nonatomic, strong) UIView *metalView;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

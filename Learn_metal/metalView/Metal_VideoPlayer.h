@@ -20,7 +20,9 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign) MetalVideoMode videoMode;
 
-- (instancetype)initWithFrame:(CGRect)frame withVideoUrl:(NSURL *)url;
+- (instancetype)initWithFrame:(CGRect)frame;
+
+- (void)playerUrl:(NSURL*)url;
 
 @end
 

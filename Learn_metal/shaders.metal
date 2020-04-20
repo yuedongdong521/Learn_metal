@@ -39,3 +39,22 @@ samplingShader(RasterizerData input [[stage_in]], // stage_in表示这个数据�
     
     return float4(colorSample);
 }
+
+
+
+fragment float4
+yuv_samplingShader(RasterizerData input [[stage_in]], // stage_in表示这个数据来自光栅化。（光栅化是顶点处理之后的步骤，业务层无法修改）
+               texture2d<float> textureY [[ texture(LYFragmentTextureIndexTextureY) ]], // texture表明是纹理数据，LYFragmentTextureIndexTextureY是索引
+               texture2d<float> textureUV [[ texture(LYFragmentTextureIndexTextureUV) ]], // texture表明是纹理数据，LYFragmentTextureIndexTextureUV是索引
+               constant LYConvertMatrix *convertMatrix [[ buffer(LYFragmentInputIndexMatrix) ]]) //buffer表明是缓存数据，LYFragmentInputIndexMatrix是索引
+{
+    constexpr sampler textureSampler (mag_filter::linear,
+                                      min_filter::linear); // sampler是采样器
+    
+    float3 yuv = float3(textureY.sample(textureSampler, input.textureCoordinate).r,
+                        textureUV.sample(textureSampler, input.textureCoordinate).rg);
+    
+    float3 rgb = convertMatrix->matrix * (yuv + convertMatrix->offset);
+    
+    return float4(rgb, 1.0);
+}

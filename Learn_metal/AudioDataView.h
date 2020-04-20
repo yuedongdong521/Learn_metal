@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AudioDataView : UIView
 
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSData *audioData;
+
+- (instancetype)initWithFrame:(CGRect)frame url:(NSURL *)url;
+
 @end
 
 NS_ASSUME_NONNULL_END

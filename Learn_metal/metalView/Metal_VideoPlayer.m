@@ -10,10 +10,15 @@
 #import <MetalKit/MetalKit.h>
 #import "LYShaderTypes.h"
 #import <AVFoundation/AVFoundation.h>
-#import "LYAssetReader.h"
-
+#import "AudioPlayer.h"
+#import "YDDAssetReader.h"
 
 @interface Metal_VideoPlayer ()<MTKViewDelegate>
+{
+    dispatch_queue_t _audioPlayQueue;
+    CMSampleBufferRef _curSampleBuffer;
+    CMTime _startTime;
+}
 
 // view
 @property (nonatomic, strong) MTKView *mtkView;
@@ -30,7 +35,14 @@
 @property (nonatomic, strong) id<MTLBuffer> convertMatrix;
 @property (nonatomic, assign) NSUInteger numVertices;
 
-@property (nonatomic, strong) LYAssetReader *assetRender;
+@property (nonatomic, strong) YDDAssetReader *assetRender;
+
+@property (nonatomic, strong) AudioPlayer *audioPlayer;
+
+@property (nonatomic, strong) NSDate *videoShowDate;
+
+@property (nonatomic, assign) NSTimeInterval showDaution;
+
 
 @end
 
@@ -44,12 +56,21 @@
 }
 */
 
-- (instancetype)initWithFrame:(CGRect)frame withVideoUrl:(NSURL *)url
+- (void)dealloc
+{
+    NSLog(@"dealloc %@", NSStringFromClass(self.class));
+    [_audioPlayer destory];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.mtkView = [[MTKView alloc] initWithFrame:self.bounds device:MTLCreateSystemDefaultDevice()];
         self.mtkView.delegate = self;
+        
+        _audioPlayQueue = dispatch_queue_create("metal.audioPlaye.queue", DISPATCH_QUEUE_SERIAL);
+        self.audioPlayer = [[AudioPlayer alloc] init];
         
         [self addSubview:self.mtkView];
         
@@ -57,11 +78,16 @@
         CVMetalTextureCacheCreate(NULL, NULL, self.mtkView.device, NULL, &_textureCache); // TextureCache的创建
 
         [self customInit];
-        
-        self.assetRender = [[LYAssetReader alloc] initWithUrl:url];
-        
     }
     return self;
+}
+
+- (void)playerUrl:(NSURL*)url
+{
+    self.assetRender = [[YDDAssetReader alloc] initWithUrl:url];
+    self.assetRender.runloop = YES;
+    self.audioPlayer.runloop = YES;
+    [self.audioPlayer playUrl:url];
 }
 
 - (void)customInit {
@@ -189,8 +215,54 @@
         [encoder setFragmentTexture:textureUV
                             atIndex:LYFragmentTextureIndexTextureUV]; // 设置纹理
     }
-    CFRelease(sampleBuffer); // 记得释放
+//    CFRelease(sampleBuffer); // 记得释放
 }
+
+// 设置纹理
+- (void)setupTextureWithEncoder:(id<MTLRenderCommandEncoder>)encoder pixelBuffer:(CVPixelBufferRef)pixelBuffer {
+    id<MTLTexture> textureY = nil;
+    id<MTLTexture> textureUV = nil;
+    // textureY 设置
+    {
+        size_t width = CVPixelBufferGetWidthOfPlane(pixelBuffer, 0);
+        size_t height = CVPixelBufferGetHeightOfPlane(pixelBuffer, 0);
+        MTLPixelFormat pixelFormat = MTLPixelFormatR8Unorm; // 这里的颜色格式不是RGBA
+        
+        CVMetalTextureRef texture = NULL; // CoreVideo的Metal纹理
+        CVReturn status = CVMetalTextureCacheCreateTextureFromImage(NULL, self.textureCache, pixelBuffer, NULL, pixelFormat, width, height, 0, &texture);
+        if(status == kCVReturnSuccess)
+        {
+            textureY = CVMetalTextureGetTexture(texture); // 转成Metal用的纹理
+            CFRelease(texture);
+        }
+    }
+    
+    // textureUV 设置
+    {
+        size_t width = CVPixelBufferGetWidthOfPlane(pixelBuffer, 1);
+        size_t height = CVPixelBufferGetHeightOfPlane(pixelBuffer, 1);
+        MTLPixelFormat pixelFormat = MTLPixelFormatRG8Unorm; // 2-8bit的格式
+        
+        CVMetalTextureRef texture = NULL; // CoreVideo的Metal纹理
+        CVReturn status = CVMetalTextureCacheCreateTextureFromImage(NULL, self.textureCache, pixelBuffer, NULL, pixelFormat, width, height, 1, &texture);
+        if(status == kCVReturnSuccess)
+        {
+            textureUV = CVMetalTextureGetTexture(texture); // 转成Metal用的纹理
+            CFRelease(texture);
+        }
+    }
+    
+    if(textureY != nil && textureUV != nil)
+    {
+        [encoder setFragmentTexture:textureY
+                            atIndex:LYFragmentTextureIndexTextureY]; // 设置纹理
+        [encoder setFragmentTexture:textureUV
+                            atIndex:LYFragmentTextureIndexTextureUV]; // 设置纹理
+    }
+    //    CFRelease(sampleBuffer); // 记得释放
+}
+
+
 
 //- (CGSize)coverEn
 
@@ -202,25 +274,57 @@
 }
 
 
+- (VideoDataModel *)getVideoData
+{
+//    __weak typeof(self) weakself = self;
+    return [self.assetRender readBuffer];
+}
+
 - (void)drawInMTKView:(MTKView *)view {
+    
+    if (_videoShowDate && _curSampleBuffer) {
+        NSDate *curDate = [NSDate date];
+        NSTimeInterval  time = [curDate timeIntervalSinceDate:_videoShowDate];
+//        CMTime presentation = CMSampleBufferGetPresentationTimeStamp(_curSampleBuffer);
+        CMTime drutaion = CMSampleBufferGetOutputPresentationTimeStamp(_curSampleBuffer);
+//        CMTime showTime = CMTimeAdd(drutaion, _startTime);
+        _showDaution = CMTimeGetSeconds(drutaion);
+        NSLog(@"show daution : %f", _showDaution);
+        if (time >= _showDaution) {
+            // 从LYAssetReader中读取图像数据
+            CFRelease(_curSampleBuffer);
+            _curSampleBuffer = nil;
+            VideoDataModel *videoModel = [self getVideoData];
+            _curSampleBuffer = videoModel.videoBuffer;
+            _startTime = videoModel.startTime;
+        } else {
+//            return;
+        }
+    } else {
+        VideoDataModel *videoModel = [self getVideoData];
+        _curSampleBuffer = videoModel.videoBuffer;
+        _videoShowDate = [NSDate dateWithTimeIntervalSinceNow:-CMTimeGetSeconds(videoModel.startTime)];
+    }
+    
     // 每次渲染都要单独创建一个CommandBuffer
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
     // MTLRenderPassDescriptor描述一系列attachments的值，类似GL的FrameBuffer；同时也用来创建MTLRenderCommandEncoder
-    CMSampleBufferRef sampleBuffer = [self.assetRender readBuffer]; // 从LYAssetReader中读取图像数据
-    if(renderPassDescriptor && sampleBuffer)
+   
+
+    if(renderPassDescriptor && _curSampleBuffer)
     {
         renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.0, 0.5, 0.5, 1.0f); // 设置默认颜色
         id<MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor]; //编码绘制指令的Encoder
         
-        [renderEncoder setViewport:[self getViewpotWithSampleBuffer:sampleBuffer]]; // 设置显示区域
+        [renderEncoder setViewport:[self getViewpotWithSampleBuffer:_curSampleBuffer]]; // 设置显示区域
         [renderEncoder setRenderPipelineState:self.pipelineState]; // 设置渲染管道，以保证顶点和片元两个shader会被调用
         
         [renderEncoder setVertexBuffer:self.vertices
                                 offset:0
                                atIndex:LYVertexInputIndexVertices]; // 设置顶点缓存
         
-        [self setupTextureWithEncoder:renderEncoder buffer:sampleBuffer];
+        [self setupTextureWithEncoder:renderEncoder buffer:_curSampleBuffer];
         [renderEncoder setFragmentBuffer:self.convertMatrix
                                   offset:0
                                  atIndex:LYFragmentInputIndexMatrix];
@@ -267,6 +371,35 @@
     }
     return (MTLViewport){(width - videoWith) * 0.5, (height - videoHeight) * 0.5, videoWith, videoHeight, -1.0, 1.0 };
 }
+
+
+- (MTLViewport)getViewpotWithPixelBufferRef:(CVPixelBufferRef)pixelBufferRef
+{
+    
+    if (!pixelBufferRef || _videoMode == MetalVideoModeScaleAspectFull) {
+        return (MTLViewport){0.0, 0.0, self.viewportSize.x, self.viewportSize.y, -1.0, 1.0 };
+    }
+    CGFloat width = (CGFloat)self.viewportSize.x;
+    CGFloat height = (CGFloat)self.viewportSize.y;
+    CGFloat videoWith = (CGFloat)CVPixelBufferGetWidth(pixelBufferRef);
+    CGFloat videoHeight = (CGFloat)CVPixelBufferGetHeight(pixelBufferRef);
+    
+    CGFloat viewRate = width / height;
+    CGFloat videoRate = videoWith / videoHeight;
+    if (videoRate > viewRate) {
+        if (videoWith > width) {
+            videoHeight = width / videoWith * videoHeight;
+            videoWith = width;
+        }
+    } else {
+        if (videoHeight > height) {
+            videoWith = height / videoHeight * videoWith;
+            videoHeight = height;
+        }
+    }
+    return (MTLViewport){(width - videoWith) * 0.5, (height - videoHeight) * 0.5, videoWith, videoHeight, -1.0, 1.0 };
+}
+
 
 
 @end
